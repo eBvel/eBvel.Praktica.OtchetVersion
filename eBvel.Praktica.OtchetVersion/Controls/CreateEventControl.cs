@@ -35,13 +35,10 @@ namespace eBvel.Praktica.OtchetVersion.Controls
             dataGridView1.DataSource = db.DBEventDate.Local.ToBindingList();
         }
         //
-        //Кнопка, добавляет новый элемент в бд.
         //
-        private void Add_Button_Click(object sender, EventArgs e)
+        //
+        void LoadDate_ComboBox(AddEventForm addEventForm)
         {
-            var eventDate = new EventDate();
-            var addEventForm = new AddEventForm();
-
             addEventForm.comboBox1.DataSource = db.DBCalendars.ToList();
             addEventForm.comboBox1.ValueMember = "Id";
             addEventForm.comboBox1.DisplayMember = "CalendarFullDate";
@@ -49,9 +46,13 @@ namespace eBvel.Praktica.OtchetVersion.Controls
             addEventForm.comboBox2.DataSource = db.DBListofCases.ToList();
             addEventForm.comboBox2.ValueMember = "Id";
             addEventForm.comboBox2.DisplayMember = "NameEvent";
-
-            DialogResult result = addEventForm.ShowDialog(this);
-            if(result == DialogResult.OK)
+        }
+        //
+        //Метод, сохраняет данные в бд.
+        //
+        private void SaveData(AddEventForm addEventForm, DialogResult result, EventDate eventDate)
+        {
+            if (result == DialogResult.OK)
             {
                 try
                 {
@@ -62,20 +63,51 @@ namespace eBvel.Praktica.OtchetVersion.Controls
                     eventDate.MarkEventSet();
                     db.DBEventDate.Add(eventDate);
                     db.SaveChanges();
-                    dataGridView1.Refresh();
                     MessageBox.Show("Событие добавлено!", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
-                catch(Exception ex) { MessageBox.Show(ex.Message, ex.Source, MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                catch (Exception ex) { MessageBox.Show(ex.Message, ex.Source, MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
+        //
+        //Кнопка, добавляет новый элемент в бд.
+        //
+        private void Add_Button_Click(object sender, EventArgs e)
+        {
+            var eventDate = new EventDate();
+            var addEventForm = new AddEventForm();
+            LoadDate_ComboBox(addEventForm);
 
-        private void Delete_Button_Click(object sender, EventArgs e)
+            DialogResult result = addEventForm.ShowDialog(this);
+            SaveData(addEventForm, result, eventDate);
+            dataGridView1.Refresh();
+        }
+        //
+        //Кнопка, отмечает мероприятие, как проведенное.
+        //
+        private void Cancel_Button_Click(object sender, EventArgs e)
         {
             var eventDate = SearchingObject();
             var CheckMark = eventDate.MarkEventUnset();
             if (CheckMark == true)
                 MessageBox.Show("Мероприятие проведено!");
             else MessageBox.Show("Мероприятие уже было проведено!");
+            dataGridView1.Refresh();
+        }
+        //
+        //Кнопка, редактирования событий.
+        //
+        private void Edit_Button_Click(object sender, EventArgs e)
+        {
+            var eventDate = SearchingObject();
+            var addEventForm = new AddEventForm();
+            LoadDate_ComboBox(addEventForm);
+            addEventForm.comboBox1.Text = eventDate.vCalendar.ToString();
+            addEventForm.comboBox2.Text = eventDate.vListofCases.ToString();
+            addEventForm.dateTimePicker1.Value = Convert.ToDateTime(eventDate.StartTime);
+            addEventForm.dateTimePicker2.Value = Convert.ToDateTime(eventDate.EndTime);
+            DialogResult result = addEventForm.ShowDialog(this);
+            SaveData(addEventForm, result, eventDate);
+            dataGridView1.Refresh();
         }
     }
 }

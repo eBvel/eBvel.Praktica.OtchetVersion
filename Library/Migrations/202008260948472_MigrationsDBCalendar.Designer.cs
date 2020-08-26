@@ -7,13 +7,13 @@ namespace Library.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class NewTimingMigration11 : IMigrationMetadata
+    public sealed partial class MigrationsDBCalendar : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(NewTimingMigration11));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(MigrationsDBCalendar));
         
         string IMigrationMetadata.Id
         {
-            get { return "202008260915528_NewTimingMigration11"; }
+            get { return "202008260948472_MigrationsDBCalendar"; }
         }
         
         string IMigrationMetadata.Source

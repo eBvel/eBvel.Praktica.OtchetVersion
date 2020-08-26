@@ -5,7 +5,7 @@ namespace Library
     public class EventDate
     {
         public int Id { get; set; }
-        public int HolidaysId { get; set; }
+        //public int HolidaysId { get; set; }
         public int ListofCasesId { get; set; }
         public int CalendarId { get; set; }
 
