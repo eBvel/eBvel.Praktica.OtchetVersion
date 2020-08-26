@@ -23,10 +23,10 @@ namespace eBvel.Praktica.OtchetVersion.Forms
             else
             {
                 var c = dateTimePicker2.Value - dateTimePicker1.Value;
-                DateTime date = dateTimePicker1.Value;
-                for ( int i = 0; i < c.Days+1; i++)
+                for (int i = 0; i < c.Days + 1; i++)
                 {
-                    listBox1.Items.Add(date.AddDays(1));
+                    DateTime date = dateTimePicker1.Value.AddDays(i);
+                    listBox1.Items.Add(date);
                 }
             }
         }

@@ -33,17 +33,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.calendarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.Create_Button = new System.Windows.Forms.Button();
             this.Holiday_Button = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numDayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameMonthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calendarFullDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeofdayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calendarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Search_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calendarBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +76,6 @@
             this.calendarFullDateDataGridViewTextBoxColumn,
             this.typeofdayDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.calendarBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(0, 70);
             this.dataGridView1.Name = "dataGridView1";
@@ -90,22 +95,19 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1238, 363);
+            this.dataGridView1.Size = new System.Drawing.Size(897, 363);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // calendarBindingSource
-            // 
-            this.calendarBindingSource.DataSource = typeof(Library.Calendar);
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1238, 70);
+            this.label1.Size = new System.Drawing.Size(1146, 70);
             this.label1.TabIndex = 2;
             this.label1.Text = "Календарь";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,6 +139,37 @@
             this.Holiday_Button.Text = "Изменить тип";
             this.Holiday_Button.UseVisualStyleBackColor = false;
             this.Holiday_Button.Click += new System.EventHandler(this.Holiday_Button_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.Search_Button);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(897, 70);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(249, 525);
+            this.panel1.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::eBvel.Praktica.OtchetVersion.Properties.Resources.iconfinder_search_322497;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(27, 25);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(48, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(196, 28);
+            this.textBox1.TabIndex = 5;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -175,17 +208,39 @@
             this.typeofdayDataGridViewTextBoxColumn.HeaderText = "Тип";
             this.typeofdayDataGridViewTextBoxColumn.Name = "typeofdayDataGridViewTextBoxColumn";
             // 
+            // calendarBindingSource
+            // 
+            this.calendarBindingSource.DataSource = typeof(Library.Calendar);
+            // 
+            // Search_Button
+            // 
+            this.Search_Button.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Search_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Search_Button.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Search_Button.ForeColor = System.Drawing.Color.White;
+            this.Search_Button.Location = new System.Drawing.Point(116, 49);
+            this.Search_Button.Name = "Search_Button";
+            this.Search_Button.Size = new System.Drawing.Size(128, 44);
+            this.Search_Button.TabIndex = 4;
+            this.Search_Button.Text = "Найти";
+            this.Search_Button.UseVisualStyleBackColor = false;
+            this.Search_Button.Click += new System.EventHandler(this.Search_Button_Click);
+            // 
             // CreateCalendarControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Holiday_Button);
             this.Controls.Add(this.Create_Button);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "CreateCalendarControl";
-            this.Size = new System.Drawing.Size(1238, 595);
+            this.Size = new System.Drawing.Size(1146, 595);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calendarBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -204,5 +259,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numYearDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn calendarFullDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeofdayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Search_Button;
     }
 }

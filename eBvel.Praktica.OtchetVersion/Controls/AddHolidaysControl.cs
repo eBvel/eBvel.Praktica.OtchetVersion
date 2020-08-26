@@ -50,7 +50,7 @@ namespace eBvel.Praktica.OtchetVersion.Controls
                         db.SaveChanges();
                     }
                     dataGridView1.Refresh();
-                    MessageBox.Show("Дата удалена!", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("Даты добавлены!", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, ex.Source,MessageBoxButtons.OK, MessageBoxIcon.Error); }
