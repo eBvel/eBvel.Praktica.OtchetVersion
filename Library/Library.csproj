@@ -58,9 +58,13 @@
     <Compile Include="EventDate.cs" />
     <Compile Include="Holidays.cs" />
     <Compile Include="ListofCases.cs" />
-    <Compile Include="Migrations\202008260508166_TimingMigration1.cs" />
-    <Compile Include="Migrations\202008260508166_TimingMigration1.designer.cs">
-      <DependentUpon>202008260508166_TimingMigration1.cs</DependentUpon>
+    <Compile Include="Migrations\202008260915528_NewTimingMigration11.cs" />
+    <Compile Include="Migrations\202008260915528_NewTimingMigration11.designer.cs">
+      <DependentUpon>202008260915528_NewTimingMigration11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008260920484_NewTimingMigration12.cs" />
+    <Compile Include="Migrations\202008260920484_NewTimingMigration12.designer.cs">
+      <DependentUpon>202008260920484_NewTimingMigration12.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,8 +74,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202008260508166_TimingMigration1.resx">
-      <DependentUpon>202008260508166_TimingMigration1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202008260915528_NewTimingMigration11.resx">
+      <DependentUpon>202008260915528_NewTimingMigration11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008260920484_NewTimingMigration12.resx">
+      <DependentUpon>202008260920484_NewTimingMigration12.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

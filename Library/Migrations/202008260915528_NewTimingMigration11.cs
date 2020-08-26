@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class TimingMigration1 : DbMigration
+    public partial class NewTimingMigration11 : DbMigration
     {
         public override void Up()
         {
@@ -33,11 +33,21 @@
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Calendars", t => t.CalendarId, cascadeDelete: true)
-                .ForeignKey("dbo.Holidays", t => t.HolidaysId, cascadeDelete: true)
                 .ForeignKey("dbo.ListofCases", t => t.ListofCasesId, cascadeDelete: true)
+                .ForeignKey("dbo.Holidays", t => t.HolidaysId, cascadeDelete: true)
                 .Index(t => t.HolidaysId)
                 .Index(t => t.ListofCasesId)
                 .Index(t => t.CalendarId);
+            
+            CreateTable(
+                "dbo.ListofCases",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        NameEvent = c.String(),
+                        PlaceEvent = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.Holidays",
@@ -50,28 +60,18 @@
                     })
                 .PrimaryKey(t => t.id);
             
-            CreateTable(
-                "dbo.ListofCases",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        NameEvent = c.String(),
-                        PlaceEvent = c.String(),
-                    })
-                .PrimaryKey(t => t.Id);
-            
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.EventDates", "ListofCasesId", "dbo.ListofCases");
             DropForeignKey("dbo.EventDates", "HolidaysId", "dbo.Holidays");
+            DropForeignKey("dbo.EventDates", "ListofCasesId", "dbo.ListofCases");
             DropForeignKey("dbo.EventDates", "CalendarId", "dbo.Calendars");
             DropIndex("dbo.EventDates", new[] { "CalendarId" });
             DropIndex("dbo.EventDates", new[] { "ListofCasesId" });
             DropIndex("dbo.EventDates", new[] { "HolidaysId" });
-            DropTable("dbo.ListofCases");
             DropTable("dbo.Holidays");
+            DropTable("dbo.ListofCases");
             DropTable("dbo.EventDates");
             DropTable("dbo.Calendars");
         }
