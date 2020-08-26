@@ -32,9 +32,12 @@
             this.CreateCalendar_Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.Holidays_Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.Cases_Menu = new System.Windows.Forms.ToolStripMenuItem();
-            this.Event_Menu = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.Calendar_Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.Event_Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.Archive_Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.Setting_Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.Help_Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +46,10 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CreateCalendar_Menu,
-            this.Event_Menu});
+            this.Event_Menu,
+            this.Archive_Menu,
+            this.Setting_Menu,
+            this.Help_Menu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -63,16 +69,23 @@
             // Holidays_Menu
             // 
             this.Holidays_Menu.Name = "Holidays_Menu";
-            this.Holidays_Menu.Size = new System.Drawing.Size(216, 26);
+            this.Holidays_Menu.Size = new System.Drawing.Size(210, 26);
             this.Holidays_Menu.Text = "Празднечные дни";
             this.Holidays_Menu.Click += new System.EventHandler(this.Holidays_Menu_Click);
             // 
             // Cases_Menu
             // 
             this.Cases_Menu.Name = "Cases_Menu";
-            this.Cases_Menu.Size = new System.Drawing.Size(216, 26);
+            this.Cases_Menu.Size = new System.Drawing.Size(210, 26);
             this.Cases_Menu.Text = "Список дел";
             this.Cases_Menu.Click += new System.EventHandler(this.Cases_Menu_Click);
+            // 
+            // Calendar_Menu
+            // 
+            this.Calendar_Menu.Name = "Calendar_Menu";
+            this.Calendar_Menu.Size = new System.Drawing.Size(210, 26);
+            this.Calendar_Menu.Text = "Календарь";
+            this.Calendar_Menu.Click += new System.EventHandler(this.Calendar_Menu_Click);
             // 
             // Event_Menu
             // 
@@ -80,6 +93,13 @@
             this.Event_Menu.Size = new System.Drawing.Size(171, 24);
             this.Event_Menu.Text = "Список мероприятий";
             this.Event_Menu.Click += new System.EventHandler(this.Event_Menu_Click);
+            // 
+            // Archive_Menu
+            // 
+            this.Archive_Menu.Name = "Archive_Menu";
+            this.Archive_Menu.Size = new System.Drawing.Size(64, 24);
+            this.Archive_Menu.Text = "Архив";
+            this.Archive_Menu.Click += new System.EventHandler(this.Archive_Menu_Click);
             // 
             // panel1
             // 
@@ -90,12 +110,18 @@
             this.panel1.Size = new System.Drawing.Size(800, 422);
             this.panel1.TabIndex = 1;
             // 
-            // Calendar_Menu
+            // Setting_Menu
             // 
-            this.Calendar_Menu.Name = "Calendar_Menu";
-            this.Calendar_Menu.Size = new System.Drawing.Size(216, 26);
-            this.Calendar_Menu.Text = "Календарь";
-            this.Calendar_Menu.Click += new System.EventHandler(this.Calendar_Menu_Click);
+            this.Setting_Menu.Name = "Setting_Menu";
+            this.Setting_Menu.Size = new System.Drawing.Size(102, 24);
+            this.Setting_Menu.Text = "Параметры";
+            this.Setting_Menu.Click += new System.EventHandler(this.Setting_Menu_Click);
+            // 
+            // Help_Menu
+            // 
+            this.Help_Menu.Name = "Help_Menu";
+            this.Help_Menu.Size = new System.Drawing.Size(79, 24);
+            this.Help_Menu.Text = "Справка";
             // 
             // Form1
             // 
@@ -123,6 +149,9 @@
         private System.Windows.Forms.ToolStripMenuItem Cases_Menu;
         private System.Windows.Forms.ToolStripMenuItem Event_Menu;
         private System.Windows.Forms.ToolStripMenuItem Calendar_Menu;
+        private System.Windows.Forms.ToolStripMenuItem Archive_Menu;
+        private System.Windows.Forms.ToolStripMenuItem Setting_Menu;
+        private System.Windows.Forms.ToolStripMenuItem Help_Menu;
     }
 }
 

@@ -117,10 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Target" xml:space="preserve">
-    <value>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</value>
-  </data>
-  <data name="DefaultSchema" xml:space="preserve">
-    <value>dbo</value>
-  </data>
+  <metadata name="vCalendar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="vListofCases.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="archiveEventDateBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>24, 8</value>
+  </metadata>
 </root>

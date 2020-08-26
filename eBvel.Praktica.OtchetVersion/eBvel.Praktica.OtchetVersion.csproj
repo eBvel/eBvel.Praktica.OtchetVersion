@@ -68,6 +68,12 @@
     <Compile Include="Controls\AddHolidaysControl.Designer.cs">
       <DependentUpon>AddHolidaysControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ArchiveDBControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ArchiveDBControl.Designer.cs">
+      <DependentUpon>ArchiveDBControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CreateCalendarControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     <EmbeddedResource Include="Controls\AddHolidaysControl.resx">
       <DependentUpon>AddHolidaysControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ArchiveDBControl.resx">
+      <DependentUpon>ArchiveDBControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\CreateCalendarControl.resx">
       <DependentUpon>CreateCalendarControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +159,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Library.ArchiveEventDate.datasource" />
     <None Include="Properties\DataSources\Library.Calendar.datasource" />
     <None Include="Properties\DataSources\Library.EventDate.datasource" />
     <None Include="Properties\DataSources\Library.Holidays.datasource" />

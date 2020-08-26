@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Library;
 using System.Data.Entity;
 using eBvel.Praktica.OtchetVersion.Forms;
+using System.Collections.Generic;
 
 namespace eBvel.Praktica.OtchetVersion.Controls
 {
@@ -35,7 +36,7 @@ namespace eBvel.Praktica.OtchetVersion.Controls
             dataGridView1.DataSource = db.DBEventDate.Local.ToBindingList();
         }
         //
-        //
+        //Загрузка данных в combo box'ы.
         //
         void LoadDate_ComboBox(AddEventForm addEventForm)
         {
@@ -107,6 +108,34 @@ namespace eBvel.Praktica.OtchetVersion.Controls
             addEventForm.dateTimePicker2.Value = Convert.ToDateTime(eventDate.EndTime);
             DialogResult result = addEventForm.ShowDialog(this);
             SaveData(addEventForm, result, eventDate);
+            dataGridView1.Refresh();
+        }
+        //
+        //Кнопка, для переноса событий в архив.
+        //
+        private void Archive_Button_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Данная функция, перенесет список мероприятий в архивную таблицу.\r\n",
+                "Уведомление.", MessageBoxButtons.YesNo);
+            var archiveEvent = new ArchiveEventDate();
+            var listArchiveEvent = new List<ArchiveEventDate>();
+            if (result == DialogResult.Yes)
+            {
+                foreach (var item in db.DBEventDate)
+                {
+                    archiveEvent.vCalendar = item.vCalendar;
+                    archiveEvent.vListofCases = item.vListofCases;
+                    archiveEvent.StartTime = item.StartTime;
+                    archiveEvent.EndTime = item.EndTime;
+                    listArchiveEvent.Add(archiveEvent);
+                    db.DBEventDate.Remove(item);
+                }
+                foreach (var item in listArchiveEvent)
+                {
+                    db.DBArchiveEvents.Add(item);
+                    db.SaveChanges();
+                }
+            }
             dataGridView1.Refresh();
         }
     }

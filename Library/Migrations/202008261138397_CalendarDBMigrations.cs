@@ -3,16 +3,16 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class MigrationsDBCalendar : DbMigration
+    public partial class CalendarDBMigrations : DbMigration
     {
         public override void Up()
         {
-            DropColumn("dbo.EventDates", "HolidaysId");
+            DropColumn("dbo.ArchiveEventDates", "MarkEvent");
         }
         
         public override void Down()
         {
-            AddColumn("dbo.EventDates", "HolidaysId", c => c.Int(nullable: false));
+            AddColumn("dbo.ArchiveEventDates", "MarkEvent", c => c.Boolean(nullable: false));
         }
     }
 }

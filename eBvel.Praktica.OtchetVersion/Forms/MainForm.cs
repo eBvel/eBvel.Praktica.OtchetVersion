@@ -1,12 +1,5 @@
 ﻿using eBvel.Praktica.OtchetVersion.Controls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace eBvel.Praktica.OtchetVersion
@@ -49,6 +42,19 @@ namespace eBvel.Praktica.OtchetVersion
             if (panel1.Controls.Count > 0)
                 panel1.Controls.RemoveAt(0);
             panel1.Controls.Add(c);
+        }
+
+        private void Archive_Menu_Click(object sender, EventArgs e)
+        {
+            var c = new ArchiveDBControl();
+            if (panel1.Controls.Count > 0)
+                panel1.Controls.RemoveAt(0);
+            panel1.Controls.Add(c);
+        }
+
+        private void Setting_Menu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
