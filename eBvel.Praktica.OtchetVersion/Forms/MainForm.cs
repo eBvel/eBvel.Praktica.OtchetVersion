@@ -54,7 +54,10 @@ namespace eBvel.Praktica.OtchetVersion
 
         private void Setting_Menu_Click(object sender, EventArgs e)
         {
-
+            var c = new StartPageControl();
+            if (panel1.Controls.Count > 0)
+                panel1.Controls.RemoveAt(0);
+            panel1.Controls.Add(c);
         }
     }
 }

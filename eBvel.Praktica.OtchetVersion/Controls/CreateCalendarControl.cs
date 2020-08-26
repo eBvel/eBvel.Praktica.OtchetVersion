@@ -65,7 +65,7 @@ namespace eBvel.Praktica.OtchetVersion.Controls
                     {
                         var date = Startdate.AddDays(i);
                         if (addCalendarForm.ListWeekEnd.Contains(date.DayOfWeek.ToString()) ||
-                            listHolidays.Contains(string.Format("{0:dd} {1:MMMM} {2:yyyy}", date,date,date)))
+                            listHolidays.Contains(string.Format("{0:dd} {0:MMMM} {0:yyyy}", date)))
                         {
                             AddCalendar(date,1);
                         }
