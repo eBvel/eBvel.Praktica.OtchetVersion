@@ -42,5 +42,13 @@ namespace eBvel.Praktica.OtchetVersion
                 panel1.Controls.RemoveAt(0);
             panel1.Controls.Add(c);
         }
+
+        private void Calendar_Menu_Click(object sender, EventArgs e)
+        {
+            var c = new CreateCalendarControl();
+            if (panel1.Controls.Count > 0)
+                panel1.Controls.RemoveAt(0);
+            panel1.Controls.Add(c);
+        }
     }
 }

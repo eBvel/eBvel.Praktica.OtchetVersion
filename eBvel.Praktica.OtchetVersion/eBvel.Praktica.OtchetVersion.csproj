@@ -68,11 +68,23 @@
     <Compile Include="Controls\AddHolidaysControl.Designer.cs">
       <DependentUpon>AddHolidaysControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CreateCalendarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CreateCalendarControl.Designer.cs">
+      <DependentUpon>CreateCalendarControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CreateEventControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\CreateEventControl.Designer.cs">
       <DependentUpon>CreateEventControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddCalendarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddCalendarForm.Designer.cs">
+      <DependentUpon>AddCalendarForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AddCasesForm.cs">
       <SubType>Form</SubType>
@@ -106,8 +118,14 @@
     <EmbeddedResource Include="Controls\AddHolidaysControl.resx">
       <DependentUpon>AddHolidaysControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CreateCalendarControl.resx">
+      <DependentUpon>CreateCalendarControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\CreateEventControl.resx">
       <DependentUpon>CreateEventControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddCalendarForm.resx">
+      <DependentUpon>AddCalendarForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddCasesForm.resx">
       <DependentUpon>AddCasesForm.cs</DependentUpon>
@@ -131,6 +149,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Library.Calendar.datasource" />
     <None Include="Properties\DataSources\Library.EventDate.datasource" />
     <None Include="Properties\DataSources\Library.Holidays.datasource" />
     <None Include="Properties\DataSources\Library.ListofCases.datasource" />

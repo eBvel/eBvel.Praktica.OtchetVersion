@@ -13,7 +13,7 @@ namespace Library.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202008251315030_TimingMigration1"; }
+            get { return "202008260508166_TimingMigration1"; }
         }
         
         string IMigrationMetadata.Source

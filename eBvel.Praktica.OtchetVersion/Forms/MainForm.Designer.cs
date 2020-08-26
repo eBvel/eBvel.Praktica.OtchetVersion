@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.календарьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CreateCalendar_Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.Holidays_Menu = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.Cases_Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.Event_Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.Calendar_Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +42,7 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.календарьToolStripMenuItem,
+            this.CreateCalendar_Menu,
             this.Event_Menu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -49,14 +50,15 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // календарьToolStripMenuItem
+            // CreateCalendar_Menu
             // 
-            this.календарьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CreateCalendar_Menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Holidays_Menu,
-            this.Cases_Menu});
-            this.календарьToolStripMenuItem.Name = "календарьToolStripMenuItem";
-            this.календарьToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
-            this.календарьToolStripMenuItem.Text = "Календарь";
+            this.Cases_Menu,
+            this.Calendar_Menu});
+            this.CreateCalendar_Menu.Name = "CreateCalendar_Menu";
+            this.CreateCalendar_Menu.Size = new System.Drawing.Size(96, 24);
+            this.CreateCalendar_Menu.Text = "Календарь";
             // 
             // Holidays_Menu
             // 
@@ -64,15 +66,6 @@
             this.Holidays_Menu.Size = new System.Drawing.Size(216, 26);
             this.Holidays_Menu.Text = "Празднечные дни";
             this.Holidays_Menu.Click += new System.EventHandler(this.Holidays_Menu_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.AutoSize = true;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 422);
-            this.panel1.TabIndex = 1;
             // 
             // Cases_Menu
             // 
@@ -87,6 +80,22 @@
             this.Event_Menu.Size = new System.Drawing.Size(171, 24);
             this.Event_Menu.Text = "Список мероприятий";
             this.Event_Menu.Click += new System.EventHandler(this.Event_Menu_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 422);
+            this.panel1.TabIndex = 1;
+            // 
+            // Calendar_Menu
+            // 
+            this.Calendar_Menu.Name = "Calendar_Menu";
+            this.Calendar_Menu.Size = new System.Drawing.Size(216, 26);
+            this.Calendar_Menu.Text = "Календарь";
+            this.Calendar_Menu.Click += new System.EventHandler(this.Calendar_Menu_Click);
             // 
             // Form1
             // 
@@ -108,11 +117,12 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem календарьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CreateCalendar_Menu;
         private System.Windows.Forms.ToolStripMenuItem Holidays_Menu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem Cases_Menu;
         private System.Windows.Forms.ToolStripMenuItem Event_Menu;
+        private System.Windows.Forms.ToolStripMenuItem Calendar_Menu;
     }
 }
 

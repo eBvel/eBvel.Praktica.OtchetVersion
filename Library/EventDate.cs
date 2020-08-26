@@ -7,9 +7,11 @@ namespace Library
         public int Id { get; set; }
         public int HolidaysId { get; set; }
         public int ListofCasesId { get; set; }
+        public int CalendarId { get; set; }
 
         public virtual Holidays vHolidays { get; set; }
         public virtual ListofCases vListofCases { get; set; }
+        public virtual Calendar vCalendar { get; set; }
 
         public string StartTime { get; set; }
 
