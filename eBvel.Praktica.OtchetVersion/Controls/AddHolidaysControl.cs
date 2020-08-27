@@ -3,13 +3,16 @@ using System.Windows.Forms;
 using eBvel.Praktica.OtchetVersion.Forms;
 using Library;
 using System.Data.Entity;
+using System.Linq;
 
 namespace eBvel.Praktica.OtchetVersion.Controls
 {
     public partial class AddHolidaysControl : UserControl
     {
         CalendarContext db;
-
+        //
+        //Метод, для поиска объекта.
+        //
         Holidays SearchingObject()
         {
             if (dataGridView1.SelectedRows.Count > 0)
@@ -21,7 +24,9 @@ namespace eBvel.Praktica.OtchetVersion.Controls
             }
             return null;
         }
-
+        //
+        //Конструктор.
+        //
         public AddHolidaysControl()
         {
             InitializeComponent();
@@ -29,7 +34,9 @@ namespace eBvel.Praktica.OtchetVersion.Controls
             db.DBHolidays.Load();
             dataGridView1.DataSource = db.DBHolidays.Local.ToBindingList();
         }
-
+        //
+        //Кнопка, добавляет список выходных.
+        //
         private void Add_Button_Click(object sender, EventArgs e)
         {
             var holiday = new Holidays();
@@ -55,7 +62,9 @@ namespace eBvel.Praktica.OtchetVersion.Controls
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, ex.Source,MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
-
+        //
+        //Кнопка, удаляет объект.
+        //
         private void Delete_Button_Click(object sender, EventArgs e)
         {
             var holiday = SearchingObject() ?? throw new NullReferenceException("Для удаления, требуется выбрать дату!");
@@ -63,6 +72,19 @@ namespace eBvel.Praktica.OtchetVersion.Controls
             db.SaveChanges();
             dataGridView1.Refresh();
             MessageBox.Show("Дата удалена!", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+        //
+        //Кнопка, поиска.
+        //
+        private void Search_Button_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = db.DBHolidays.Local.Where(p => p.FullDate.Contains(textBox1.Text)).ToList();
+        }
+
+        private void SearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                Search_Button.PerformClick();
         }
     }
 }

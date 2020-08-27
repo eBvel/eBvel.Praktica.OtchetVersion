@@ -30,14 +30,17 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.References_Label = new System.Windows.Forms.Label();
-            this.Reports_Label = new System.Windows.Forms.Label();
             this.Exit_Label = new System.Windows.Forms.Label();
+            this.Reports_Label = new System.Windows.Forms.Label();
+            this.References_Label = new System.Windows.Forms.Label();
             this.Reference_Label1 = new System.Windows.Forms.Label();
             this.Reference_Label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Report_Label2 = new System.Windows.Forms.Label();
+            this.Report_Label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.Continue_Button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -67,20 +70,20 @@
             this.panel1.Size = new System.Drawing.Size(191, 488);
             this.panel1.TabIndex = 2;
             // 
-            // References_Label
+            // Exit_Label
             // 
-            this.References_Label.AutoSize = true;
-            this.References_Label.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.References_Label.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.References_Label.ForeColor = System.Drawing.Color.White;
-            this.References_Label.Location = new System.Drawing.Point(30, 77);
-            this.References_Label.Name = "References_Label";
-            this.References_Label.Size = new System.Drawing.Size(117, 30);
-            this.References_Label.TabIndex = 0;
-            this.References_Label.Text = "Справки";
-            this.References_Label.Click += new System.EventHandler(this.References_Label_Click);
-            this.References_Label.MouseEnter += new System.EventHandler(this.Reference_MouseEnter);
-            this.References_Label.MouseLeave += new System.EventHandler(this.Reference_MouseLeave);
+            this.Exit_Label.AutoSize = true;
+            this.Exit_Label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Exit_Label.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Exit_Label.ForeColor = System.Drawing.Color.White;
+            this.Exit_Label.Location = new System.Drawing.Point(30, 254);
+            this.Exit_Label.Name = "Exit_Label";
+            this.Exit_Label.Size = new System.Drawing.Size(86, 30);
+            this.Exit_Label.TabIndex = 1;
+            this.Exit_Label.Text = "Выход";
+            this.Exit_Label.Click += new System.EventHandler(this.Exit_Label_Click);
+            this.Exit_Label.MouseEnter += new System.EventHandler(this.Exit_MouseEnter);
+            this.Exit_Label.MouseLeave += new System.EventHandler(this.Exit_MouseLeave);
             // 
             // Reports_Label
             // 
@@ -97,20 +100,20 @@
             this.Reports_Label.MouseEnter += new System.EventHandler(this.Report_MouseEnter);
             this.Reports_Label.MouseLeave += new System.EventHandler(this.Report_MouseLeave);
             // 
-            // Exit_Label
+            // References_Label
             // 
-            this.Exit_Label.AutoSize = true;
-            this.Exit_Label.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Exit_Label.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Exit_Label.ForeColor = System.Drawing.Color.White;
-            this.Exit_Label.Location = new System.Drawing.Point(30, 254);
-            this.Exit_Label.Name = "Exit_Label";
-            this.Exit_Label.Size = new System.Drawing.Size(86, 30);
-            this.Exit_Label.TabIndex = 1;
-            this.Exit_Label.Text = "Выход";
-            this.Exit_Label.Click += new System.EventHandler(this.Exit_Label_Click);
-            this.Exit_Label.MouseEnter += new System.EventHandler(this.Exit_MouseEnter);
-            this.Exit_Label.MouseLeave += new System.EventHandler(this.Exit_MouseLeave);
+            this.References_Label.AutoSize = true;
+            this.References_Label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.References_Label.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.References_Label.ForeColor = System.Drawing.Color.White;
+            this.References_Label.Location = new System.Drawing.Point(30, 77);
+            this.References_Label.Name = "References_Label";
+            this.References_Label.Size = new System.Drawing.Size(117, 30);
+            this.References_Label.TabIndex = 0;
+            this.References_Label.Text = "Справки";
+            this.References_Label.Click += new System.EventHandler(this.References_Label_Click);
+            this.References_Label.MouseEnter += new System.EventHandler(this.Reference_MouseEnter);
+            this.References_Label.MouseLeave += new System.EventHandler(this.Reference_MouseLeave);
             // 
             // Reference_Label1
             // 
@@ -134,39 +137,79 @@
             this.Reference_Label2.Size = new System.Drawing.Size(611, 22);
             this.Reference_Label2.TabIndex = 4;
             this.Reference_Label2.Text = "> СПРАВКА: о запланированных мероприятиях на текущий год.\r\n";
+            this.Reference_Label2.Click += new System.EventHandler(this.Reference_Label2_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.Continue_Button);
+            this.panel2.Controls.Add(this.dateTimePicker2);
+            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.Report_Label2);
+            this.panel2.Controls.Add(this.Report_Label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(461, 70);
+            this.panel2.Location = new System.Drawing.Point(190, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(468, 488);
+            this.panel2.Size = new System.Drawing.Size(739, 488);
             this.panel2.TabIndex = 5;
             this.panel2.Visible = false;
             // 
-            // label2
+            // Report_Label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(48, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(593, 22);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "> ОТЧЕТ: о запланированных мероприятиях на будущий день.\r\n";
+            this.Report_Label2.AutoSize = true;
+            this.Report_Label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Report_Label2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Report_Label2.Location = new System.Drawing.Point(48, 173);
+            this.Report_Label2.Name = "Report_Label2";
+            this.Report_Label2.Size = new System.Drawing.Size(638, 22);
+            this.Report_Label2.TabIndex = 1;
+            this.Report_Label2.Text = "> ОТЧЕТ: о мероприятиях, проведенных за интересующий период.\r\n";
+            this.Report_Label2.Click += new System.EventHandler(this.Report_Label2_Click);
             // 
-            // label3
+            // Report_Label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(48, 173);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(638, 22);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "> ОТЧЕТ: о мероприятиях, проведенных за интересующий период.\r\n";
+            this.Report_Label1.AutoSize = true;
+            this.Report_Label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Report_Label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Report_Label1.Location = new System.Drawing.Point(48, 90);
+            this.Report_Label1.Name = "Report_Label1";
+            this.Report_Label1.Size = new System.Drawing.Size(593, 22);
+            this.Report_Label1.TabIndex = 0;
+            this.Report_Label1.Text = "> ОТЧЕТ: о запланированных мероприятиях на будущий день.\r\n";
+            this.Report_Label1.Click += new System.EventHandler(this.Report_Label1_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(441, 210);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 30);
+            this.dateTimePicker1.TabIndex = 2;
+            this.dateTimePicker1.Visible = false;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(441, 254);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 30);
+            this.dateTimePicker2.TabIndex = 2;
+            this.dateTimePicker2.Visible = false;
+            // 
+            // Continue_Button
+            // 
+            this.Continue_Button.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Continue_Button.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Continue_Button.ForeColor = System.Drawing.Color.White;
+            this.Continue_Button.Location = new System.Drawing.Point(501, 299);
+            this.Continue_Button.Name = "Continue_Button";
+            this.Continue_Button.Size = new System.Drawing.Size(140, 44);
+            this.Continue_Button.TabIndex = 3;
+            this.Continue_Button.Text = "Продолжить";
+            this.Continue_Button.UseVisualStyleBackColor = false;
+            this.Continue_Button.Visible = false;
+            this.Continue_Button.Click += new System.EventHandler(this.Continue_Button_Click);
             // 
             // StartPageControl
             // 
@@ -199,7 +242,10 @@
         private System.Windows.Forms.Label Reference_Label1;
         private System.Windows.Forms.Label Reference_Label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Report_Label2;
+        private System.Windows.Forms.Label Report_Label1;
+        private System.Windows.Forms.Button Continue_Button;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

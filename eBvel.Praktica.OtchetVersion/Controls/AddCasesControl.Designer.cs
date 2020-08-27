@@ -41,6 +41,7 @@
             this.Delete_Button = new System.Windows.Forms.Button();
             this.Unload_Button = new System.Windows.Forms.Button();
             this.Load_Button = new System.Windows.Forms.Button();
+            this.Edit_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listofCasesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -124,7 +125,7 @@
             this.Add_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Add_Button.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Add_Button.ForeColor = System.Drawing.Color.White;
-            this.Add_Button.Location = new System.Drawing.Point(14, 442);
+            this.Add_Button.Location = new System.Drawing.Point(3, 442);
             this.Add_Button.Name = "Add_Button";
             this.Add_Button.Size = new System.Drawing.Size(140, 44);
             this.Add_Button.TabIndex = 2;
@@ -138,7 +139,7 @@
             this.Delete_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Delete_Button.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Delete_Button.ForeColor = System.Drawing.Color.White;
-            this.Delete_Button.Location = new System.Drawing.Point(222, 442);
+            this.Delete_Button.Location = new System.Drawing.Point(328, 442);
             this.Delete_Button.Name = "Delete_Button";
             this.Delete_Button.Size = new System.Drawing.Size(140, 44);
             this.Delete_Button.TabIndex = 2;
@@ -152,7 +153,7 @@
             this.Unload_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Unload_Button.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Unload_Button.ForeColor = System.Drawing.Color.White;
-            this.Unload_Button.Location = new System.Drawing.Point(14, 530);
+            this.Unload_Button.Location = new System.Drawing.Point(646, 535);
             this.Unload_Button.Name = "Unload_Button";
             this.Unload_Button.Size = new System.Drawing.Size(174, 44);
             this.Unload_Button.TabIndex = 2;
@@ -166,13 +167,27 @@
             this.Load_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Load_Button.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Load_Button.ForeColor = System.Drawing.Color.White;
-            this.Load_Button.Location = new System.Drawing.Point(194, 530);
+            this.Load_Button.Location = new System.Drawing.Point(826, 535);
             this.Load_Button.Name = "Load_Button";
             this.Load_Button.Size = new System.Drawing.Size(198, 44);
             this.Load_Button.TabIndex = 2;
             this.Load_Button.Text = "Загрузить список";
             this.Load_Button.UseVisualStyleBackColor = false;
             this.Load_Button.Click += new System.EventHandler(this.Load_Button_Click);
+            // 
+            // Edit_Button
+            // 
+            this.Edit_Button.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Edit_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Edit_Button.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Edit_Button.ForeColor = System.Drawing.Color.White;
+            this.Edit_Button.Location = new System.Drawing.Point(165, 442);
+            this.Edit_Button.Name = "Edit_Button";
+            this.Edit_Button.Size = new System.Drawing.Size(140, 44);
+            this.Edit_Button.TabIndex = 2;
+            this.Edit_Button.Text = "Изменить";
+            this.Edit_Button.UseVisualStyleBackColor = false;
+            this.Edit_Button.Click += new System.EventHandler(this.Edit_Button_Click);
             // 
             // AddCasesControl
             // 
@@ -181,6 +196,7 @@
             this.Controls.Add(this.Delete_Button);
             this.Controls.Add(this.Load_Button);
             this.Controls.Add(this.Unload_Button);
+            this.Controls.Add(this.Edit_Button);
             this.Controls.Add(this.Add_Button);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
@@ -204,5 +220,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn placeEventDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button Unload_Button;
         private System.Windows.Forms.Button Load_Button;
+        private System.Windows.Forms.Button Edit_Button;
     }
 }

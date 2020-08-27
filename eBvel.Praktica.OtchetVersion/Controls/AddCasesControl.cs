@@ -10,7 +10,6 @@ namespace eBvel.Praktica.OtchetVersion.Controls
     public partial class AddCasesControl : UserControl
     {
         CalendarContext db;
-        bool loadfile = false;
         //
         //Метод, для поиска элемента в бд.
         //
@@ -74,7 +73,7 @@ namespace eBvel.Praktica.OtchetVersion.Controls
         //
         private void Unload_Button_Click(object sender, EventArgs e)
         {
-            if (loadfile == false)
+            if (db.DBListofCases.Local.Count > 0)
             {
                 using (var sw = new StreamWriter("CasesDate.txt", false))
                 {
@@ -83,7 +82,6 @@ namespace eBvel.Praktica.OtchetVersion.Controls
                         sw.WriteLine(item.NameEvent);
                         sw.WriteLine(item.PlaceEvent);
                     }
-                    loadfile = true;
                     MessageBox.Show("Выгрузка завершена!", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
@@ -93,20 +91,40 @@ namespace eBvel.Praktica.OtchetVersion.Controls
         //
         private void Load_Button_Click(object sender, EventArgs e)
         {
-            if (loadfile)
+            var cases = new ListofCases();
+            using (var sr = new StreamReader("CasesDate.txt"))
             {
-                var cases = new ListofCases();
-                using (var sr = new StreamReader("CasesDate.txt"))
+                while (!sr.EndOfStream)
                 {
-                    while (!sr.EndOfStream)
-                    {
-                        cases.NameEvent = sr.ReadLine();
-                        cases.PlaceEvent = sr.ReadLine();
-                        db.DBListofCases.Add(cases);
-                        db.SaveChanges();
-                    }
-                    loadfile = false;
+                    cases.NameEvent = sr.ReadLine();
+                    cases.PlaceEvent = sr.ReadLine();
+                    db.DBListofCases.Add(cases);
+                    db.SaveChanges();
                 }
+            }
+        }
+        //
+        //Кнопка, редактирования дела.
+        //
+        private void Edit_Button_Click(object sender, EventArgs e)
+        {
+            var cases = SearchingObject();
+            var addCasesForm = new AddCasesForm();
+            addCasesForm.NameEvent_TextBox.Text = cases.NameEvent;
+            addCasesForm.PlaceEvent_TextBox.Text = cases.PlaceEvent;
+            DialogResult result = addCasesForm.ShowDialog(this);
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    cases.NameEvent = addCasesForm.NameEvent_TextBox.Text;
+                    cases.PlaceEvent = addCasesForm.PlaceEvent_TextBox.Text;
+                    db.DBListofCases.Add(cases);
+                    db.SaveChanges();
+                    dataGridView1.Refresh();
+                    MessageBox.Show("Дело изменено!", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                catch (Exception ex) { MessageBox.Show(ex.Message, ex.Source, MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
     }
