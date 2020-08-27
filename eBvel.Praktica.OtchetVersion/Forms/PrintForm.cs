@@ -15,7 +15,9 @@ namespace eBvel.Praktica.OtchetVersion.Forms
         public static extern long BitBlt(IntPtr hdcDest, int nXDest, int nYDest,
             int nWidth, int nHeight, IntPtr hdcSrc, int nXSrc, int nYSrc, int dwRop);
         private Bitmap memoryImage;
-
+        //
+        //Метод, делает скриншот формы.
+        //
         private void CaptureScreen()
         {
             Graphics mygraphics = this.CreateGraphics();
@@ -29,12 +31,16 @@ namespace eBvel.Praktica.OtchetVersion.Forms
             mygraphics.ReleaseHdc(dc1);
             memoryGraphics.ReleaseHdc(dc2);
         }
-
+        //
+        //Событие, для печати документа.
+        //
         private void printFormDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(memoryImage, 0, 0);
         }
-
+        //
+        //Кнопка, для начала печати.
+        //
         private void Print_Button_Click(object sender, EventArgs e)
         {
             Print_Button.Visible = false;

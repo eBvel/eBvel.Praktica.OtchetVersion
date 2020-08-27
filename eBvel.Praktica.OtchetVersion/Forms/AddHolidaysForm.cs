@@ -26,7 +26,7 @@ namespace eBvel.Praktica.OtchetVersion.Forms
                 for (int i = 0; i < c.Days + 1; i++)
                 {
                     DateTime date = dateTimePicker1.Value.AddDays(i);
-                    listBox1.Items.Add(date);
+                    listBox1.Items.Add(date.ToShortDateString());
                 }
             }
         }

@@ -59,13 +59,9 @@
     <Compile Include="EventDate.cs" />
     <Compile Include="Holidays.cs" />
     <Compile Include="ListofCases.cs" />
-    <Compile Include="Migrations\202008261138397_CalendarDBMigrations.cs" />
-    <Compile Include="Migrations\202008261138397_CalendarDBMigrations.designer.cs">
-      <DependentUpon>202008261138397_CalendarDBMigrations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202008261321319_OneMoreMigration.cs" />
-    <Compile Include="Migrations\202008261321319_OneMoreMigration.designer.cs">
-      <DependentUpon>202008261321319_OneMoreMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202008270602284_CalendarDBMigrations.cs" />
+    <Compile Include="Migrations\202008270602284_CalendarDBMigrations.designer.cs">
+      <DependentUpon>202008270602284_CalendarDBMigrations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,11 +71,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202008261138397_CalendarDBMigrations.resx">
-      <DependentUpon>202008261138397_CalendarDBMigrations.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202008261321319_OneMoreMigration.resx">
-      <DependentUpon>202008261321319_OneMoreMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202008270602284_CalendarDBMigrations.resx">
+      <DependentUpon>202008270602284_CalendarDBMigrations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

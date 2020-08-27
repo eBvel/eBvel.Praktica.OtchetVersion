@@ -9,7 +9,8 @@ namespace eBvel.Praktica.OtchetVersion
         public Form1()
         {
             InitializeComponent();
-
+            var c = new StartPageControl();
+            panel1.Controls.Add(c);
         }
 
         private void Holidays_Menu_Click(object sender, EventArgs e)
@@ -42,6 +43,7 @@ namespace eBvel.Praktica.OtchetVersion
             if (panel1.Controls.Count > 0)
                 panel1.Controls.RemoveAt(0);
             panel1.Controls.Add(c);
+            c.HighlightHolidays();
         }
 
         private void Archive_Menu_Click(object sender, EventArgs e)
@@ -55,6 +57,14 @@ namespace eBvel.Praktica.OtchetVersion
         private void Setting_Menu_Click(object sender, EventArgs e)
         {
             var c = new StartPageControl();
+            if (panel1.Controls.Count > 0)
+                panel1.Controls.RemoveAt(0);
+            panel1.Controls.Add(c);
+        }
+
+        private void Help_Menu_Click(object sender, EventArgs e)
+        {
+            var c = new HelpControl();
             if (panel1.Controls.Count > 0)
                 panel1.Controls.RemoveAt(0);
             panel1.Controls.Add(c);

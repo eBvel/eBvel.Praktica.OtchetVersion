@@ -86,6 +86,12 @@
     <Compile Include="Controls\CreateEventControl.Designer.cs">
       <DependentUpon>CreateEventControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\HelpControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\HelpControl.Designer.cs">
+      <DependentUpon>HelpControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\StartPageControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CreateEventControl.resx">
       <DependentUpon>CreateEventControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HelpControl.resx">
+      <DependentUpon>HelpControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\StartPageControl.resx">
       <DependentUpon>StartPageControl.cs</DependentUpon>

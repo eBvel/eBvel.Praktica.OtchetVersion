@@ -35,12 +35,12 @@
             this.References_Label = new System.Windows.Forms.Label();
             this.Reference_Label1 = new System.Windows.Forms.Label();
             this.Reference_Label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.Report_Label2 = new System.Windows.Forms.Label();
             this.Report_Label1 = new System.Windows.Forms.Label();
+            this.Report_Label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.Continue_Button = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -139,19 +139,17 @@
             this.Reference_Label2.Text = "> СПРАВКА: о запланированных мероприятиях на текущий год.\r\n";
             this.Reference_Label2.Click += new System.EventHandler(this.Reference_Label2_Click);
             // 
-            // panel2
+            // Report_Label1
             // 
-            this.panel2.Controls.Add(this.Continue_Button);
-            this.panel2.Controls.Add(this.dateTimePicker2);
-            this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Controls.Add(this.Report_Label2);
-            this.panel2.Controls.Add(this.Report_Label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(190, 70);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(739, 488);
-            this.panel2.TabIndex = 5;
-            this.panel2.Visible = false;
+            this.Report_Label1.AutoSize = true;
+            this.Report_Label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Report_Label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Report_Label1.Location = new System.Drawing.Point(48, 90);
+            this.Report_Label1.Name = "Report_Label1";
+            this.Report_Label1.Size = new System.Drawing.Size(593, 22);
+            this.Report_Label1.TabIndex = 0;
+            this.Report_Label1.Text = "> ОТЧЕТ: о запланированных мероприятиях на будущий день.\r\n";
+            this.Report_Label1.Click += new System.EventHandler(this.Report_Label1_Click);
             // 
             // Report_Label2
             // 
@@ -164,18 +162,6 @@
             this.Report_Label2.TabIndex = 1;
             this.Report_Label2.Text = "> ОТЧЕТ: о мероприятиях, проведенных за интересующий период.\r\n";
             this.Report_Label2.Click += new System.EventHandler(this.Report_Label2_Click);
-            // 
-            // Report_Label1
-            // 
-            this.Report_Label1.AutoSize = true;
-            this.Report_Label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Report_Label1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Report_Label1.Location = new System.Drawing.Point(48, 90);
-            this.Report_Label1.Name = "Report_Label1";
-            this.Report_Label1.Size = new System.Drawing.Size(593, 22);
-            this.Report_Label1.TabIndex = 0;
-            this.Report_Label1.Text = "> ОТЧЕТ: о запланированных мероприятиях на будущий день.\r\n";
-            this.Report_Label1.Click += new System.EventHandler(this.Report_Label1_Click);
             // 
             // dateTimePicker1
             // 
@@ -211,6 +197,22 @@
             this.Continue_Button.Visible = false;
             this.Continue_Button.Click += new System.EventHandler(this.Continue_Button_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.Continue_Button);
+            this.panel2.Controls.Add(this.dateTimePicker2);
+            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.Report_Label2);
+            this.panel2.Controls.Add(this.Report_Label1);
+            this.panel2.Location = new System.Drawing.Point(191, 70);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(737, 491);
+            this.panel2.TabIndex = 5;
+            this.panel2.Visible = false;
+            // 
             // StartPageControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -241,11 +243,11 @@
         private System.Windows.Forms.Label References_Label;
         private System.Windows.Forms.Label Reference_Label1;
         private System.Windows.Forms.Label Reference_Label2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label Report_Label2;
         private System.Windows.Forms.Label Report_Label1;
-        private System.Windows.Forms.Button Continue_Button;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label Report_Label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button Continue_Button;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -116,7 +116,9 @@ namespace eBvel.Praktica.OtchetVersion.Controls
             var printForm = new PrintForm();
             printForm.label1.Text = $"ОТЧЕТ\r\nо проведенных мероприятиях с {firstDate.Year} года по {secondDate.Year} года";
             printForm.dataGridView1.DataSource = db.DBEventDate.Local.Where
-                (p => Convert.ToDateTime(p.vCalendar.ToString()) > firstDate && Convert.ToDateTime(p.vCalendar.ToString()) < secondDate).ToList();
+                (p => p.MarkEvent &&
+                Convert.ToDateTime(p.vCalendar.ToString()) > firstDate &&
+                Convert.ToDateTime(p.vCalendar.ToString()) < secondDate).ToList();
             DialogResult result = printForm.ShowDialog(this);
         }
         #endregion

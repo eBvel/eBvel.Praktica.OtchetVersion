@@ -10,8 +10,7 @@ namespace Library
         }
 
         public override string ToString()
-        {
-            
+        {   
             return ReturnEvent;
         }
 

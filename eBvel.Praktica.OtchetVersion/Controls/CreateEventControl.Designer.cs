@@ -106,7 +106,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1019, 70);
+            this.label1.Size = new System.Drawing.Size(1002, 70);
             this.label1.TabIndex = 3;
             this.label1.Text = "Список мероприятий";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -117,6 +117,7 @@
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -125,7 +126,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 44;
+            this.dataGridView1.ColumnHeadersHeight = 50;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.vCalendar,
@@ -146,7 +147,7 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1019, 366);
+            this.dataGridView1.Size = new System.Drawing.Size(1002, 366);
             this.dataGridView1.TabIndex = 4;
             // 
             // idDataGridViewTextBoxColumn
@@ -198,9 +199,9 @@
             this.Archive_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Archive_Button.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Archive_Button.ForeColor = System.Drawing.Color.White;
-            this.Archive_Button.Location = new System.Drawing.Point(833, 442);
+            this.Archive_Button.Location = new System.Drawing.Point(826, 442);
             this.Archive_Button.Name = "Archive_Button";
-            this.Archive_Button.Size = new System.Drawing.Size(158, 44);
+            this.Archive_Button.Size = new System.Drawing.Size(165, 44);
             this.Archive_Button.TabIndex = 6;
             this.Archive_Button.Text = "Архивировать";
             this.Archive_Button.UseVisualStyleBackColor = false;
@@ -210,6 +211,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.Edit_Button);
             this.Controls.Add(this.Cancel_Button);
             this.Controls.Add(this.Archive_Button);
@@ -217,7 +220,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "CreateEventControl";
-            this.Size = new System.Drawing.Size(1019, 600);
+            this.Size = new System.Drawing.Size(1002, 598);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventDateBindingSource)).EndInit();
             this.ResumeLayout(false);

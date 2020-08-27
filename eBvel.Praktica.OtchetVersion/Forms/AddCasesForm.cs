@@ -10,8 +10,6 @@ namespace eBvel.Praktica.OtchetVersion.Forms
             InitializeComponent();
         }
 
-
-
         #region AnimationLabel
         private void label2_Click(object sender, EventArgs e)
         {
@@ -47,7 +45,16 @@ namespace eBvel.Praktica.OtchetVersion.Forms
             if (PlaceEvent_TextBox.Text == "")
                 label3.Visible = true;
         }
-        #endregion
 
+        private void NameEvent_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            NameEvent_TextBox.Visible = false;
+        }
+
+        private void PlaceEvent_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            PlaceEvent_TextBox.Visible = false;
+        }
+        #endregion
     }
 }

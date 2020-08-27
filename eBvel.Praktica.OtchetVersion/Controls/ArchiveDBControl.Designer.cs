@@ -32,14 +32,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Transfer_Button = new System.Windows.Forms.Button();
-            this.archiveEventDateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vCalendar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vListofCases = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.endTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.archiveEventDateBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.Transfer_Button = new System.Windows.Forms.Button();
             this.Delete_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.archiveEventDateBindingSource)).BeginInit();
@@ -51,6 +51,7 @@
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -59,7 +60,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 44;
+            this.dataGridView1.ColumnHeadersHeight = 50;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.vCalendar,
@@ -79,40 +80,8 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1055, 366);
+            this.dataGridView1.Size = new System.Drawing.Size(1003, 366);
             this.dataGridView1.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1055, 70);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Архив";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Transfer_Button
-            // 
-            this.Transfer_Button.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.Transfer_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Transfer_Button.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Transfer_Button.ForeColor = System.Drawing.Color.White;
-            this.Transfer_Button.Location = new System.Drawing.Point(3, 442);
-            this.Transfer_Button.Name = "Transfer_Button";
-            this.Transfer_Button.Size = new System.Drawing.Size(195, 44);
-            this.Transfer_Button.TabIndex = 7;
-            this.Transfer_Button.Text = "Вернуть в список";
-            this.Transfer_Button.UseVisualStyleBackColor = false;
-            this.Transfer_Button.Click += new System.EventHandler(this.Transfer_Button_Click);
-            // 
-            // archiveEventDateBindingSource
-            // 
-            this.archiveEventDateBindingSource.DataSource = typeof(Library.ArchiveEventDate);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -131,6 +100,7 @@
             this.vListofCases.DataPropertyName = "vListofCases";
             this.vListofCases.HeaderText = "Мероприятие";
             this.vListofCases.Name = "vListofCases";
+            this.vListofCases.Width = 300;
             // 
             // startTimeDataGridViewTextBoxColumn
             // 
@@ -143,6 +113,38 @@
             this.endTimeDataGridViewTextBoxColumn.DataPropertyName = "EndTime";
             this.endTimeDataGridViewTextBoxColumn.HeaderText = "Время окончания";
             this.endTimeDataGridViewTextBoxColumn.Name = "endTimeDataGridViewTextBoxColumn";
+            // 
+            // archiveEventDateBindingSource
+            // 
+            this.archiveEventDateBindingSource.DataSource = typeof(Library.ArchiveEventDate);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1003, 70);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Архив";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Transfer_Button
+            // 
+            this.Transfer_Button.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Transfer_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Transfer_Button.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Transfer_Button.ForeColor = System.Drawing.Color.White;
+            this.Transfer_Button.Location = new System.Drawing.Point(3, 442);
+            this.Transfer_Button.Name = "Transfer_Button";
+            this.Transfer_Button.Size = new System.Drawing.Size(195, 44);
+            this.Transfer_Button.TabIndex = 7;
+            this.Transfer_Button.Text = "Вернуть в список";
+            this.Transfer_Button.UseVisualStyleBackColor = false;
+            this.Transfer_Button.Click += new System.EventHandler(this.Transfer_Button_Click);
             // 
             // Delete_Button
             // 
@@ -162,12 +164,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.Delete_Button);
             this.Controls.Add(this.Transfer_Button);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "ArchiveDBControl";
-            this.Size = new System.Drawing.Size(1055, 568);
+            this.Size = new System.Drawing.Size(1003, 548);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.archiveEventDateBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -180,11 +184,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource archiveEventDateBindingSource;
         private System.Windows.Forms.Button Transfer_Button;
+        private System.Windows.Forms.Button Delete_Button;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vCalendar;
         private System.Windows.Forms.DataGridViewTextBoxColumn vListofCases;
         private System.Windows.Forms.DataGridViewTextBoxColumn startTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn endTimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button Delete_Button;
     }
 }

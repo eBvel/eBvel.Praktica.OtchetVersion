@@ -11,7 +11,7 @@ namespace eBvel.Praktica.OtchetVersion.Controls
     {
         CalendarContext db;
         //
-        //Конструктор.
+        //Метод, для поиска объектов в бд.
         //
         ArchiveEventDate SearchingObject()
         {

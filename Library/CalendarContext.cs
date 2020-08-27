@@ -1,8 +1,6 @@
 ﻿namespace Library
 {
-    using System;
     using System.Data.Entity;
-    using System.Linq;
 
     public class CalendarContext : DbContext
     {

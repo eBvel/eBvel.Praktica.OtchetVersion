@@ -92,6 +92,7 @@ namespace eBvel.Praktica.OtchetVersion.Controls
             if (CheckMark == true)
                 MessageBox.Show("Мероприятие проведено!");
             else MessageBox.Show("Мероприятие уже было проведено!");
+            db.SaveChanges();
             dataGridView1.Refresh();
         }
         //

@@ -47,6 +47,7 @@
             this.NameEvent_TextBox.Name = "NameEvent_TextBox";
             this.NameEvent_TextBox.Size = new System.Drawing.Size(720, 104);
             this.NameEvent_TextBox.TabIndex = 0;
+            this.NameEvent_TextBox.TextChanged += new System.EventHandler(this.NameEvent_TextBox_TextChanged);
             this.NameEvent_TextBox.Enter += new System.EventHandler(this.NameEventTextBox_Enter);
             this.NameEvent_TextBox.Leave += new System.EventHandler(this.NameEventTextBox_Leave);
             // 
@@ -72,6 +73,7 @@
             this.PlaceEvent_TextBox.Name = "PlaceEvent_TextBox";
             this.PlaceEvent_TextBox.Size = new System.Drawing.Size(720, 28);
             this.PlaceEvent_TextBox.TabIndex = 2;
+            this.PlaceEvent_TextBox.TextChanged += new System.EventHandler(this.PlaceEvent_TextBox_TextChanged);
             this.PlaceEvent_TextBox.Enter += new System.EventHandler(this.PlaceEventTextBox_Enter);
             this.PlaceEvent_TextBox.Leave += new System.EventHandler(this.PlaceEventTextBox_Leave);
             // 
@@ -131,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 340);
+            this.ClientSize = new System.Drawing.Size(726, 317);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Cancel_Button);

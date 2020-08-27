@@ -35,14 +35,15 @@
             this.Calendar_Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.Event_Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.Archive_Menu = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.Setting_Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.Help_Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CreateCalendar_Menu,
@@ -52,7 +53,7 @@
             this.Help_Menu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,74 +64,79 @@
             this.Cases_Menu,
             this.Calendar_Menu});
             this.CreateCalendar_Menu.Name = "CreateCalendar_Menu";
-            this.CreateCalendar_Menu.Size = new System.Drawing.Size(96, 24);
+            this.CreateCalendar_Menu.Size = new System.Drawing.Size(116, 25);
             this.CreateCalendar_Menu.Text = "Календарь";
             // 
             // Holidays_Menu
             // 
             this.Holidays_Menu.Name = "Holidays_Menu";
-            this.Holidays_Menu.Size = new System.Drawing.Size(210, 26);
+            this.Holidays_Menu.Size = new System.Drawing.Size(235, 26);
             this.Holidays_Menu.Text = "Празднечные дни";
             this.Holidays_Menu.Click += new System.EventHandler(this.Holidays_Menu_Click);
             // 
             // Cases_Menu
             // 
             this.Cases_Menu.Name = "Cases_Menu";
-            this.Cases_Menu.Size = new System.Drawing.Size(210, 26);
+            this.Cases_Menu.Size = new System.Drawing.Size(235, 26);
             this.Cases_Menu.Text = "Список дел";
             this.Cases_Menu.Click += new System.EventHandler(this.Cases_Menu_Click);
             // 
             // Calendar_Menu
             // 
             this.Calendar_Menu.Name = "Calendar_Menu";
-            this.Calendar_Menu.Size = new System.Drawing.Size(210, 26);
+            this.Calendar_Menu.Size = new System.Drawing.Size(235, 26);
             this.Calendar_Menu.Text = "Календарь";
             this.Calendar_Menu.Click += new System.EventHandler(this.Calendar_Menu_Click);
             // 
             // Event_Menu
             // 
             this.Event_Menu.Name = "Event_Menu";
-            this.Event_Menu.Size = new System.Drawing.Size(171, 24);
+            this.Event_Menu.Size = new System.Drawing.Size(208, 25);
             this.Event_Menu.Text = "Список мероприятий";
             this.Event_Menu.Click += new System.EventHandler(this.Event_Menu_Click);
             // 
             // Archive_Menu
             // 
             this.Archive_Menu.Name = "Archive_Menu";
-            this.Archive_Menu.Size = new System.Drawing.Size(64, 24);
+            this.Archive_Menu.Size = new System.Drawing.Size(73, 25);
             this.Archive_Menu.Text = "Архив";
             this.Archive_Menu.Click += new System.EventHandler(this.Archive_Menu_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.AutoSize = true;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 422);
-            this.panel1.TabIndex = 1;
             // 
             // Setting_Menu
             // 
             this.Setting_Menu.Name = "Setting_Menu";
-            this.Setting_Menu.Size = new System.Drawing.Size(102, 24);
+            this.Setting_Menu.Size = new System.Drawing.Size(126, 25);
             this.Setting_Menu.Text = "Параметры";
             this.Setting_Menu.Click += new System.EventHandler(this.Setting_Menu_Click);
             // 
             // Help_Menu
             // 
             this.Help_Menu.Name = "Help_Menu";
-            this.Help_Menu.Size = new System.Drawing.Size(79, 24);
+            this.Help_Menu.Size = new System.Drawing.Size(99, 25);
             this.Help_Menu.Text = "Справка";
+            this.Help_Menu.Click += new System.EventHandler(this.Help_Menu_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 29);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 421);
+            this.panel1.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Производственный календарь";
             this.menuStrip1.ResumeLayout(false);
