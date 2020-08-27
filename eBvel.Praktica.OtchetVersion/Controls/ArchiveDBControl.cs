@@ -39,13 +39,13 @@ namespace eBvel.Praktica.OtchetVersion.Controls
         //
         void LoadDate_ComboBox(AddEventForm addEventForm)
         {
-            addEventForm.comboBox1.DataSource = db.DBCalendars.ToList();
-            addEventForm.comboBox1.ValueMember = "Id";
-            addEventForm.comboBox1.DisplayMember = "CalendarFullDate";
-
-            addEventForm.comboBox2.DataSource = db.DBListofCases.ToList();
+            addEventForm.comboBox2.DataSource = db.DBCalendars.ToList();
             addEventForm.comboBox2.ValueMember = "Id";
-            addEventForm.comboBox2.DisplayMember = "NameEvent";
+            addEventForm.comboBox2.DisplayMember = "CalendarFullDate";
+
+            addEventForm.comboBox1.DataSource = db.DBListofCases.ToList();
+            addEventForm.comboBox1.ValueMember = "Id";
+            addEventForm.comboBox1.DisplayMember = "NameEvent";
         }
 
         private void Transfer_Button_Click(object sender, EventArgs e)
@@ -55,6 +55,7 @@ namespace eBvel.Praktica.OtchetVersion.Controls
             LoadDate_ComboBox(addEventForm);
             addEventForm.comboBox1.Text = archiveEvent.vCalendar.ToString();
             addEventForm.comboBox2.Text = archiveEvent.vListofCases.ToString();
+            addEventForm.comboBox1.Enabled = false;
             addEventForm.dateTimePicker1.Value = Convert.ToDateTime(archiveEvent.StartTime);
             addEventForm.dateTimePicker2.Value = Convert.ToDateTime(archiveEvent.EndTime);
             DialogResult result = addEventForm.ShowDialog(this);
@@ -63,8 +64,8 @@ namespace eBvel.Praktica.OtchetVersion.Controls
                 try
                 {
                     var eventDate = new EventDate();
-                    eventDate.vCalendar = (Calendar)addEventForm.comboBox1.SelectedItem;
-                    eventDate.vListofCases = (ListofCases)addEventForm.comboBox2.SelectedItem;
+                    eventDate.vListofCases = (ListofCases)addEventForm.comboBox1.SelectedItem;
+                    eventDate.vCalendar = (Calendar)addEventForm.comboBox2.SelectedItem;
                     eventDate.StartTime = addEventForm.dateTimePicker1.Value.ToShortTimeString();
                     eventDate.EndTime = addEventForm.dateTimePicker2.Value.ToShortTimeString();
                     eventDate.MarkEventSet();

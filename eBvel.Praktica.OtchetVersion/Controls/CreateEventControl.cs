@@ -40,13 +40,13 @@ namespace eBvel.Praktica.OtchetVersion.Controls
         //
         void LoadDate_ComboBox(AddEventForm addEventForm)
         {
-            addEventForm.comboBox1.DataSource = db.DBCalendars.ToList();
-            addEventForm.comboBox1.ValueMember = "Id";
-            addEventForm.comboBox1.DisplayMember = "CalendarFullDate";
-
-            addEventForm.comboBox2.DataSource = db.DBListofCases.ToList();
+            addEventForm.comboBox2.DataSource = db.DBCalendars.ToList();
             addEventForm.comboBox2.ValueMember = "Id";
-            addEventForm.comboBox2.DisplayMember = "NameEvent";
+            addEventForm.comboBox2.DisplayMember = "CalendarFullDate";
+
+            addEventForm.comboBox1.DataSource = db.DBListofCases.ToList();
+            addEventForm.comboBox1.ValueMember = "Id";
+            addEventForm.comboBox1.DisplayMember = "NameEvent";
         }
         //
         //Метод, сохраняет данные в бд.
@@ -57,8 +57,8 @@ namespace eBvel.Praktica.OtchetVersion.Controls
             {
                 try
                 {
-                    eventDate.vCalendar = (Calendar)addEventForm.comboBox1.SelectedItem;
-                    eventDate.vListofCases = (ListofCases)addEventForm.comboBox2.SelectedItem;
+                    eventDate.vListofCases = (ListofCases)addEventForm.comboBox1.SelectedItem;
+                    eventDate.vCalendar = (Calendar)addEventForm.comboBox2.SelectedItem;
                     eventDate.StartTime = addEventForm.dateTimePicker1.Value.ToShortTimeString();
                     eventDate.EndTime = addEventForm.dateTimePicker2.Value.ToShortTimeString();
                     eventDate.MarkEventSet();

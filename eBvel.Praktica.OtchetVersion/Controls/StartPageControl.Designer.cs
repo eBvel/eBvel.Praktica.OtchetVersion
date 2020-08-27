@@ -209,7 +209,7 @@
             this.panel2.Controls.Add(this.Report_Label1);
             this.panel2.Location = new System.Drawing.Point(191, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(737, 491);
+            this.panel2.Size = new System.Drawing.Size(738, 491);
             this.panel2.TabIndex = 5;
             this.panel2.Visible = false;
             // 

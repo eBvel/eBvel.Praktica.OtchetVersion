@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBvel.Praktica.OtchetVersion", "eBvel.Praktica.OtchetVersion\eBvel.Praktica.OtchetVersion.csproj", "{F6ADF884-895C-4FD2-9848-8B4F01E02198}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductionCalendarProject", "eBvel.Praktica.OtchetVersion\ProductionCalendarProject.csproj", "{F6ADF884-895C-4FD2-9848-8B4F01E02198}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.csproj", "{57AFC3F1-6C80-4327-B55A-AA061AB99405}"
 EndProject

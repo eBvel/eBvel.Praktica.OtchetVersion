@@ -62,7 +62,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(937, 70);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Празднечные дни";
+            this.label1.Text = "Праздничные дни";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridView1

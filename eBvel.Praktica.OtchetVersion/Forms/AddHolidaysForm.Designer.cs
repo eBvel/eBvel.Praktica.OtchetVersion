@@ -50,7 +50,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(603, 67);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Заполните выходные дни";
+            this.label1.Text = "Заполните праздничные дни";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dateTimePicker1
