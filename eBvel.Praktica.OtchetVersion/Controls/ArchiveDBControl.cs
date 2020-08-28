@@ -47,7 +47,9 @@ namespace eBvel.Praktica.OtchetVersion.Controls
             addEventForm.comboBox1.ValueMember = "Id";
             addEventForm.comboBox1.DisplayMember = "NameEvent";
         }
-
+        //
+        //Кнопка, переносит данные в основную таблицу.
+        //
         private void Transfer_Button_Click(object sender, EventArgs e)
         {
             var archiveEvent = SearchingObject();
@@ -87,6 +89,21 @@ namespace eBvel.Praktica.OtchetVersion.Controls
             db.DBArchiveEvents.Remove(archiveEvent);
             db.SaveChanges();
             MessageBox.Show("Объект удален!", "Оповещение", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+        //
+        //Кнопка, поиска объектов в списке.
+        //
+        private void Search_Button_Click(object sender, EventArgs e)
+        {
+            if (Event_RadioButton.Checked)
+                dataGridView1.DataSource = db.DBArchiveEvents.Local.Where(p => p.vListofCases.ToString().Contains(textBox1.Text)).ToList();
+            else dataGridView1.DataSource = db.DBArchiveEvents.Local.Where(p => p.vCalendar.ToString().Contains(textBox1.Text)).ToList();
+        }
+
+        private void SearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                Search_Button.PerformClick();
         }
     }
 }

@@ -11,6 +11,7 @@ namespace eBvel.Praktica.OtchetVersion.Controls
     public partial class CreateEventControl : UserControl
     {
         CalendarContext db;
+        Config config;
         //
         //Метод, для поиска объектов в бд.
         //
@@ -32,8 +33,28 @@ namespace eBvel.Praktica.OtchetVersion.Controls
         {
             InitializeComponent();
             db = new CalendarContext();
+            config = new Config();
             db.DBEventDate.Load();
             dataGridView1.DataSource = db.DBEventDate.Local.ToBindingList();
+        }
+        //
+        //Второй конструктор.
+        //
+        internal void SecondConstruction()
+        {
+            config.ToDayIsEvent += Config_ToDayIsEvent;
+            config.CheckEventToDay();
+        }
+        //
+        //Метод, вызываемого события.
+        //
+        private void Config_ToDayIsEvent(EventDate obj, bool flag)
+        {
+            if (flag)
+                MessageBox.Show($"На сегодня запланировано мероприятие.\r\n{obj.vListofCases.ToString()}",
+                    "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            else if (obj.MarkEventUnset())
+                db.SaveChanges();
         }
         //
         //Загрузка данных в combo box'ы.
@@ -132,9 +153,24 @@ namespace eBvel.Praktica.OtchetVersion.Controls
         private void Mark_Button_Click(object sender, EventArgs e)
         {
             var eventDate = SearchingObject();
-            if (eventDate.MarkEvent == false)
-                eventDate.MarkEventUnset();
-            db.SaveChanges();
+            if (eventDate.MarkEventUnset())
+                db.SaveChanges();
+        }
+        //
+        //Кнопка, поиска объектов в списке.
+        //
+        private void Search_Button_Click(object sender, EventArgs e)
+        {
+            if (Event_RadioButton.Checked)
+                dataGridView1.DataSource = db.DBEventDate.Local.Where(p => p.vListofCases.ToString().Contains(textBox1.Text)).ToList();
+            else
+                dataGridView1.DataSource = db.DBEventDate.Local.Where(p => p.vCalendar.ToString().Contains(textBox1.Text)).ToList();
+        }
+
+        private void SearchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                Search_Button.PerformClick();
         }
     }
 }

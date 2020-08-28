@@ -56,6 +56,7 @@
     <Compile Include="ArchiveEventDate.cs" />
     <Compile Include="Calendar.cs" />
     <Compile Include="CalendarContext.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="EventDate.cs" />
     <Compile Include="Holidays.cs" />
     <Compile Include="ListofCases.cs" />

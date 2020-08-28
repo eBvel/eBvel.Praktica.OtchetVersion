@@ -211,7 +211,7 @@
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(46, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 28);
+            this.textBox1.Size = new System.Drawing.Size(167, 28);
             this.textBox1.TabIndex = 5;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SearchTextBox_KeyPress);
             // 
@@ -221,7 +221,7 @@
             this.Search_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Search_Button.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Search_Button.ForeColor = System.Drawing.Color.White;
-            this.Search_Button.Location = new System.Drawing.Point(84, 47);
+            this.Search_Button.Location = new System.Drawing.Point(85, 37);
             this.Search_Button.Name = "Search_Button";
             this.Search_Button.Size = new System.Drawing.Size(128, 44);
             this.Search_Button.TabIndex = 4;

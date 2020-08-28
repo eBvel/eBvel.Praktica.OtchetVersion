@@ -4,6 +4,7 @@ using Library;
 using System.Data.Entity;
 using eBvel.Praktica.OtchetVersion.Forms;
 using System.IO;
+using System.Linq;
 
 namespace eBvel.Praktica.OtchetVersion.Controls
 {
@@ -126,6 +127,18 @@ namespace eBvel.Praktica.OtchetVersion.Controls
                 }
                 catch (Exception ex) { MessageBox.Show(ex.Message, ex.Source, MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
+        }
+        //
+        //Кнопка, поиска объекта в таблице.
+        //
+        private void Search_Button_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = db.DBListofCases.Local.Where(p => p.NameEvent.Contains(textBox1.Text)).ToList();
+        }
+        private void SearchKeyPress_TextBox(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                Search_Button.PerformClick();
         }
     }
 }
