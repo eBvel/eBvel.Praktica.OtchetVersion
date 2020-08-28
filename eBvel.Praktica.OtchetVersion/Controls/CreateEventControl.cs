@@ -83,19 +83,6 @@ namespace eBvel.Praktica.OtchetVersion.Controls
             dataGridView1.Refresh();
         }
         //
-        //Кнопка, отмечает мероприятие, как проведенное.
-        //
-        private void Cancel_Button_Click(object sender, EventArgs e)
-        {
-            var eventDate = SearchingObject();
-            var CheckMark = eventDate.MarkEventUnset();
-            if (CheckMark == true)
-                MessageBox.Show("Мероприятие проведено!");
-            else MessageBox.Show("Мероприятие уже было проведено!");
-            db.SaveChanges();
-            dataGridView1.Refresh();
-        }
-        //
         //Кнопка, редактирования событий.
         //
         private void Edit_Button_Click(object sender, EventArgs e)
@@ -138,6 +125,16 @@ namespace eBvel.Praktica.OtchetVersion.Controls
                 }
             }
             dataGridView1.Refresh();
+        }
+        //
+        //Кнопка, отмечает мероприятие, как проведенное.
+        //
+        private void Mark_Button_Click(object sender, EventArgs e)
+        {
+            var eventDate = SearchingObject();
+            if (eventDate.MarkEvent == false)
+                eventDate.MarkEventUnset();
+            db.SaveChanges();
         }
     }
 }

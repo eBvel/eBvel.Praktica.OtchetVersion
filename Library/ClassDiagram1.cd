@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Library.ArchiveEventDate">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAAAAAAAAAAAIAAAAAAAIAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ArchiveEventDate.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="vCalendar" />
+      <Property Name="vListofCases" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Library.Calendar">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAggAAAAEAACAAAAAAAACAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Calendar.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EventDates" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Library.CalendarContext">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAEAAAAAAAAAAACAAAgABAAAAAA=</HashCode>
+      <FileName>CalendarContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DBArchiveEvents" />
+      <Property Name="DBCalendars" />
+      <Property Name="DBEventDate" />
+      <Property Name="DBHolidays" />
+      <Property Name="DBListofCases" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Library.EventDate">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAAAAAAAkACAIAAAAAAAIAAkAAACAAAAAAAAAAA=</HashCode>
+      <FileName>EventDate.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="vCalendar" />
+      <Property Name="vListofCases" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Library.Holidays">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAACAAAAAAAAAAAAAAAAAABAAAwA=</HashCode>
+      <FileName>Holidays.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.ListofCases">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAABAAEAAAAAAAAAgAAAAAAAAAAgIAAAAA=</HashCode>
+      <FileName>ListofCases.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Events" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Library.Migrations.CalendarDBMigrations" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAMAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAAI=</HashCode>
+      <FileName>Migrations\202008270602284_CalendarDBMigrations.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Library.Migrations.Configuration" Collapsed="true">
+    <Position X="10.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Migrations\Configuration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Data.Entity.DbSet&lt;TEntity&gt;" Collapsed="true">
+    <Position X="10.25" Y="5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="System.Collections.Generic.ICollection&lt;T&gt;" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

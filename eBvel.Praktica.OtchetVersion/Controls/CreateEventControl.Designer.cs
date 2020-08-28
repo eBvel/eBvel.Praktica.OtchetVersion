@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.Cancel_Button = new System.Windows.Forms.Button();
+            this.Mark_Button = new System.Windows.Forms.Button();
             this.Add_Button = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit_Button = new System.Windows.Forms.Button();
@@ -49,19 +49,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.eventDateBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // Cancel_Button
+            // Mark_Button
             // 
-            this.Cancel_Button.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.Cancel_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cancel_Button.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Cancel_Button.ForeColor = System.Drawing.Color.White;
-            this.Cancel_Button.Location = new System.Drawing.Point(324, 442);
-            this.Cancel_Button.Name = "Cancel_Button";
-            this.Cancel_Button.Size = new System.Drawing.Size(140, 44);
-            this.Cancel_Button.TabIndex = 5;
-            this.Cancel_Button.Text = "Отменить";
-            this.Cancel_Button.UseVisualStyleBackColor = false;
-            this.Cancel_Button.Click += new System.EventHandler(this.Cancel_Button_Click);
+            this.Mark_Button.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Mark_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Mark_Button.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Mark_Button.ForeColor = System.Drawing.Color.White;
+            this.Mark_Button.Location = new System.Drawing.Point(324, 442);
+            this.Mark_Button.Name = "Mark_Button";
+            this.Mark_Button.Size = new System.Drawing.Size(140, 44);
+            this.Mark_Button.TabIndex = 5;
+            this.Mark_Button.Text = "Отметить";
+            this.Mark_Button.UseVisualStyleBackColor = false;
+            this.Mark_Button.Click += new System.EventHandler(this.Mark_Button_Click);
             // 
             // Add_Button
             // 
@@ -214,7 +214,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.Edit_Button);
-            this.Controls.Add(this.Cancel_Button);
+            this.Controls.Add(this.Mark_Button);
             this.Controls.Add(this.Archive_Button);
             this.Controls.Add(this.Add_Button);
             this.Controls.Add(this.dataGridView1);
@@ -229,7 +229,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Cancel_Button;
+        private System.Windows.Forms.Button Mark_Button;
         private System.Windows.Forms.Button Add_Button;
         private System.Windows.Forms.BindingSource eventDateBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;

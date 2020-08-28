@@ -34,6 +34,7 @@ namespace eBvel.Praktica.OtchetVersion.Controls
             InitializeComponent();
             db = new CalendarContext();
             db.DBCalendars.Load();
+            CheckHolidays();
             dataGridView1.DataSource = db.DBCalendars.Local.ToBindingList();
         }
         //
@@ -121,6 +122,21 @@ namespace eBvel.Praktica.OtchetVersion.Controls
                     }
                 }
             }
+        }
+        //
+        //Метод, проверка списка праздничных дней.
+        //
+        void CheckHolidays()
+        {
+            var listHolidays = db.DBHolidays.ToList().Select(p => p.FullDate);
+            foreach (var date in db.DBCalendars)
+            {
+                if (listHolidays.Contains(date.CalendarFullDate))
+                {
+                    date.Typeofday = "Выходной день";
+                }
+            }
+            db.SaveChanges();
         }
     }
 }
